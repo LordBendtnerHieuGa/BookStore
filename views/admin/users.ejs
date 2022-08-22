@@ -1,0 +1,43 @@
+<%- include('../layouts/adminHeader') %>
+
+<h2 class="page-title">Users</h2>
+<h4 class="number-users">Number of users <span class="label label-primary"><%= countUser %></span></h4>
+<a href="#" class="btn btn-primary">Add a new user</a>
+<br><br>
+
+<% if (countUser > 0) { %>
+
+<table class="table table-striped">
+
+    <thead>
+        <tr class="home">
+            <th>UserName</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <% users.forEach(function(user){ %>
+        <tr>
+            <td><%= user.username %></td>
+            <td><%= user.email %></td>
+            <td><%= user.role %></td>
+            <td><a href="/admin/users/edit-user/<%= user._id %>">Edit</a></td>
+            <td><a class="confirmDelete" href="/admin/users/delete-user/<%= user._id %>">Delete</a></td>
+            
+        </tr>
+        <% }); %>
+    </tbody>
+</table>  
+
+<% } else { %>
+<h3 class="text-center"> There are no users! </h3>
+<% } %>
+
+
+
+   
+<%- include('../layouts/adminFooter') %>

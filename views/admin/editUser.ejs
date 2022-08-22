@@ -1,0 +1,30 @@
+<%- include('../layouts/adminHeader') %>
+
+<h2 class="page-title">Edit a user</h2>
+<a href="/admin/users" class="btn btn-primary">Back to all users</a>
+<br><br>
+
+<form method="post" action="/admin/users/edit-user/<%= id %>" enctype="multipart/form-data">
+    
+    <div class="form-group">
+        <label for="">UserName</label>
+        <input type="text" class="form-control" name="username" value="<%= username %>" placeholder="UserName">
+    </div>
+
+    <div class="form-group">
+        <label for="">Email</label>
+        <input type="text" class="form-control" name="email" value="<%= email %>" placeholder="Email">
+    </div>
+
+    <div class="form-group">
+        <label for="">Role</label>
+        <input type="text" class="form-control" name="role" value="<%= role %>" placeholder="Role">
+    </div>
+    
+    <p><b>Note:</b> enter 0 or 1 to assign user permissions with 0 as user 1 as admin</p>
+
+    <button class="btn btn-default">Submit</button>
+</form>
+
+
+<%- include('../layouts/adminFooter') %>

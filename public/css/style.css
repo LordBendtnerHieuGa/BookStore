@@ -1,0 +1,131 @@
+img.bimage {
+    width: 180px;
+    height: 200px;
+}
+
+a.ba {
+    display: inline-block;
+    height: 200px;
+    
+}
+
+/* Css list book, button view detail, add to cart */
+.row.books .b {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.row.books .vd {
+    padding: 10px;
+    color: white;
+    background-color: #222;
+}
+.row .vd {
+    padding: 10px;
+    color: white;
+    background-color: #222;
+}
+
+img.spi {
+    width: 300px;
+}
+
+ul.gallery li {
+    display: inline-block;
+    margin: 20px;
+    list-style: none;
+}
+
+.col-xs-12 .top {
+    margin-top: 40px;
+}
+
+img.cpi {
+    width: 100px;
+}
+
+.registerbtn {
+    background-color: #222;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.alert-error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+/* body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+} */
+  
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #337ab7;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+  
+#myBtn:hover {
+    background-color: #222;
+}
+
+.footer {
+    /* position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    */
+    padding-bottom: 15px;
+    padding-top: 5px;
+    background-color:#222;
+    color: white;
+    text-align: center;
+}
+
+.footer .social {
+    /* padding-bottom: 20px; */
+    color: white;
+}
+
+.footer .social a {
+    color: white;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    margin: 0 8px;
+    border-radius: 50%;
+    opacity: 0.75;  
+} 
+
+.copyright {
+    margin-top: 10px;
+}
+
+/* Slide show  */
+.home-page {
+    margin-top: 22px;
+}
+
+.jumbotron {
+    margin-top: 30px;
+}

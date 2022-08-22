@@ -1,0 +1,51 @@
+<%- include('../layouts/adminHeader') %>
+
+<h2 class="page-title">Categories</h2>
+<h4 class="number-users">Number of categories <span class="label label-primary"><%= countCategory %></span></h4>
+<a href="/admin/categories/add-category" class="btn btn-primary">Add a new category</a>
+<br><br>
+
+<% if (countCategory > 0) { %>
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% categories.forEach(function(cate){ %>
+        <tr>
+            <td><%= cate.title %></td>
+            <td><a href="/admin/categories/edit-category/<%= cate.slug %>">Edit</a></td>
+            
+            <td><a class="confirmDelete" href="/admin/categories/delete-category/<%= cate._id %>">Delete</a></td>
+            
+        </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+<% } else { %>
+    <h3 class="text-center"> There are no categories! </h3>
+<% } %>
+
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+
+<script>
+    $('tbody').sortable({
+        items: "tr:not('.home')",
+        placeholder: "ui-state-hightlight",
+        update: function () {
+            var ids = $('tbody').sortable("serialize");
+            var url = "/admin/page/reorder-pages";
+            
+            $.post(url, ids);
+        }
+    });
+</script>   
+   
+    
+<%- include('../layouts/adminFooter') %>

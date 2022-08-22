@@ -1,0 +1,94 @@
+<!-- <!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+        <title><%= title %></title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css" integrity="sha512-ykRBEJhyZ+B/BIJcBuOyUoIxh0OfdICfHPnPfBy7eIiyJv536ojTCsgX8aqrLQ9VJZHGz4tvYyzOM0lkgmQZGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- <link rel="stylesheet" href="/css/register.css" /> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ 
+  
+    
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">bookLibs</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/cart/checkout">My Cart (
+                                <% if (typeof cart !== "undefined") { %>
+                                <%= cart.length %>
+                                <% } else {%>
+                                0
+                                <% } %>
+                            )</a>
+                        </li>
+
+                        <% if (user) { %>
+                        <li><a href="/users/logout">Hi, <%= user.username %> ( logout )</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/users/profile">Your Profile</a></li>
+                                <li><a href="#">Orders</a></li>
+                            </ul>
+                        </li>
+                        <% } else {%>
+                        <li><a href="/users/register">Register</a></li>
+                        <li><a href="/users/login">Log in</a></li>
+                        <% } %>
+                        <% if (user && user.role == 1) { %>
+                        li><a href="/admin/page">Admin Area</a></li>
+                        <% }%>
+
+          
+                    </ul>
+        
+                </div><!--/.nav-collapse -->
+    
+            </div>
+        </nav>
+        <div class="container">
+            <h2>Purchase information</h2>
+            <form class="form-horizontal" action="#">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Address:</label>
+                    <div class="col-sm-10">
+                    <input type="email" class="form-control" id="address" placeholder="Enter Address" name="address">
+                    </div>
+                </div>
+              
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="phonenumber">Phone Number:</label>
+                    <div class="col-sm-10">
+                    <input type="tel" class="form-control" id="phone" placeholder="1234567890" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" name="phone" required><br><br>
+                    <small>Format: 1234567890</small><br><br>
+                </div>
+                <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Confirm</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+<% include ./layouts/footer %> -->

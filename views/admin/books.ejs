@@ -1,0 +1,58 @@
+<%- include('../layouts/adminHeader') %>
+
+<h2 class="page-title">Books</h2>
+<h4 class="number-users">Number of books <span class="label label-primary"><%= countBook %></span></h4>
+<a href="/admin/books/add-book" class="btn btn-primary">Add a new book</a>
+<br><br>
+
+<% if (countBook > 0) { %>
+
+<table class="table table-striped">
+
+    <thead>
+        <tr class="home">
+            <th>Book</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Relase Year</th>
+            <th>Pages Count</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <% books.forEach(function(book){ %>
+        <tr>
+            <td><%= book.title %></td>
+            <td><%= book.author %></td>
+            <td><%= book.category %></td>
+            <td><%= book.year %></td>
+            <td><%= book.pagesCount %></td>
+            <td>$<%= parseFloat(book.price).toFixed(2) %></td>
+            <td>
+                <% if (book.image == "") { %>
+                <img id="noimage" src="/images/noimage.png">
+                <% } else { %>
+                <img id="noimage" src="/bookImages/<%= book._id %>/<%= book.image %>">
+
+                <% } %>
+            </td>
+            <td><a href="/admin/books/edit-book/<%= book._id %>">Edit</a></td>
+            <td><a class="confirmDelete" href="/admin/books/delete-book/<%= book._id %>">Delete</a></td>
+            
+        </tr>
+        <% }); %>
+    </tbody>
+</table>  
+
+<% } else { %>
+<h3 class="text-center"> There are no books! </h3>
+<% } %>
+
+
+
+   
+<%- include('../layouts/adminFooter') %>
