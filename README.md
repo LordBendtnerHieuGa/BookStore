@@ -3,11 +3,11 @@ Personal project for practicing website coding skills with Nodejs, Express, Mong
 
 Tech:
 Book Store uses a number of open source projects to work:
-•	MongoDB - Free and open-source cross-platform document-oriented database
-•	Mongoose - Elegant MongoDB object modeling for NodeJS
-•	NodeJS - Evented I/O for the backend
-•	ExpressJS - Fast, unopinionated, minimalist web framework for NodeJS
-•	EJS template
+  	MongoDB - Free and open-source cross-platform document-oriented database
+  	Mongoose - Elegant MongoDB object modeling for NodeJS
+    NodeJS - Evented I/O for the backend
+    ExpressJS - Fast, unopinionated, minimalist web framework for NodeJS
+    EJS template
 
 Function:
 
